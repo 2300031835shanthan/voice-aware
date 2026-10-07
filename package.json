@@ -1,0 +1,9 @@
+{
+  "name": "voice-aware-indian-cultural-ai",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Minimal voice-aware Indian cultural AI frontend prototype",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

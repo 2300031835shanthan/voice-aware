@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VocaCulture AI | Voice-Aware Indian Cultural Intelligence</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-bg"></div>
+
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand-box">
+          <div class="brand-logo">V</div>
+          <div>
+            <p class="brand-name">VocaCulture AI</p>
+            <span class="brand-subtitle">Cultural Intelligence</span>
+          </div>
+        </div>
+
+        <nav class="nav-menu">
+          <button class="nav-item active" data-screen="landing">Home</button>
+          <button class="nav-item" data-screen="dashboard">Dashboard</button>
+          <button class="nav-item" data-screen="voice">Voice Input</button>
+          <button class="nav-item" data-screen="analytics">Analytics</button>
+          <button class="nav-item" data-screen="research">Research</button>
+        </nav>
+
+        <div class="sidebar-footer">
+          <p>Guide</p>
+          <strong>Dr. Ananya Verma</strong>
+          <span>AI & Social Intelligence</span>
+        </div>
+      </aside>
+
+      <main class="content-area">
+        <section id="landing-screen" class="screen active">
+          <header class="topbar">
+            <div class="header-links">
+              <span>Project</span>
+              <span>Login</span>
+            </div>
+          </header>
+
+          <div class="hero-panel card">
+            <div class="hero-copy">
+              <span class="eyebrow">Voice-aware AI for Indian cultural communication</span>
+              <h1>Understand meaning beyond words.</h1>
+              <p>
+                VocaCulture AI listens to Indian voices, interprets emotional tone,
+                cultural context, and intended meaning so that a sentence is understood
+                as communication, not just transcription.
+              </p>
+              <button class="primary-btn" id="start-btn">Start Exploring →</button>
+            </div>
+
+            <div class="hero-visual">
+              <div class="orb orb-one"></div>
+              <div class="orb orb-two"></div>
+              <div class="feature-stack">
+                <div class="feature-pill">🎤 Voice</div>
+                <div class="feature-pill">🧠 Cultural AI</div>
+                <div class="feature-pill">🔊 Speech</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="dashboard-screen" class="screen">
+          <div class="page-header">
+            <div>
+              <p class="section-kicker">Overview</p>
+              <h2>Voice Analysis</h2>
+            </div>
+            <button class="primary-btn" data-screen="voice">New Analysis</button>
+          </div>
+
+          <div class="stats-grid">
+            <div class="stat-card card">
+              <span>Speech samples</span>
+              <strong>124</strong>
+              <small>Across major Indian languages</small>
+            </div>
+            <div class="stat-card card">
+              <span>Avg. processing</span>
+              <strong>2.4s</strong>
+              <small>Pipeline latency</small>
+            </div>
+            <div class="stat-card card">
+              <span>Emotion detection</span>
+              <strong>88%</strong>
+              <small>Prototype accuracy</small>
+            </div>
+          </div>
+
+          <div class="analysis-layout">
+            <div class="card large-panel">
+              <div class="panel-head">
+                <h3>Voice Input</h3>
+                <span class="status-badge success">Listening</span>
+              </div>
+
+              <div class="recording-box">
+                <div class="record-icon">🎤</div>
+                <p>Live speech emotion recognition</p>
+                <h4 id="wave-label">00:07</h4>
+                <div class="waveform" aria-label="Audio waveform">
+                  <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                </div>
+                <div class="record-actions">
+                  <button class="primary-btn" id="record-btn">Start Recording</button>
+                  <label class="secondary-btn upload-btn">
+                    Upload Audio
+                    <input type="file" id="audio-upload" accept="audio/*" />
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="card sidebar-panel">
+              <div class="panel-head compact">
+                <h3>Current Emotion</h3>
+              </div>
+
+              <div class="emotion-panel">
+                <div class="emotion-badge" id="current-emotion-badge">😊 Happy</div>
+                <div class="confidence-box">
+                  <span>Confidence</span>
+                  <strong id="confidence-level">87%</strong>
+                </div>
+              </div>
+
+              <ul class="meta-list">
+                <li><span>Tone</span><strong id="tone-output">Positive</strong></li>
+                <li><span>Energy</span><strong id="energy-output">High</strong></li>
+                <li><span>Speaking rate</span><strong id="rate-output">Moderate</strong></li>
+                <li><span>Detected language</span><strong id="language-output">English</strong></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card real-time-panel">
+            <div class="panel-head">
+              <h3>Real-Time SER</h3>
+            </div>
+
+            <div class="emotion-bars">
+              <div class="emotion-row">
+                <span>Happy</span>
+                <div class="bar"><i style="width: 89%"></i></div>
+                <strong>89%</strong>
+              </div>
+              <div class="emotion-row">
+                <span>Neutral</span>
+                <div class="bar"><i style="width: 14%"></i></div>
+                <strong>14%</strong>
+              </div>
+              <div class="emotion-row">
+                <span>Sad</span>
+                <div class="bar"><i style="width: 7%"></i></div>
+                <strong>7%</strong>
+              </div>
+              <div class="emotion-row">
+                <span>Angry</span>
+                <div class="bar"><i style="width: 15%"></i></div>
+                <strong>15%</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="card timeline-card">
+            <div class="panel-head">
+              <h3>Emotion Timeline</h3>
+            </div>
+            <div class="timeline-chart" aria-label="Emotion timeline chart">
+              <div class="timeline-row"><span>Happy</span><div class="track"><i class="happy" style="width: 82%"></i></div></div>
+              <div class="timeline-row"><span>Neutral</span><div class="track"><i class="neutral" style="width: 42%"></i></div></div>
+              <div class="timeline-row"><span>Angry</span><div class="track"><i class="angry" style="width: 18%"></i></div></div>
+              <div class="timeline-row"><span>Sad</span><div class="track"><i class="sad" style="width: 8%"></i></div></div>
+            </div>
+          </div>
+
+          <div class="card language-card">
+            <div class="panel-head">
+              <h3>Language Mixing</h3>
+            </div>
+            <div class="mixing-meter">
+              <div class="mix-row">
+                <span>Telugu</span>
+                <div class="mix-track"><i style="width: 62%"></i></div>
+                <strong>62%</strong>
+              </div>
+              <div class="mix-row">
+                <span>English</span>
+                <div class="mix-track"><i style="width: 38%"></i></div>
+                <strong>38%</strong>
+              </div>
+            </div>
+            <p class="code-switch-note">Code-switching detected ✓</p>
+          </div>
+
+          <div class="results-grid">
+            <div class="card result-card">
+              <span class="mini-label">Transcription</span>
+              <p id="transcribed-text">I'm really happy to see everyone today and I appreciate the teamwork and support.</p>
+            </div>
+
+            <div class="card metric-card">
+              <span class="mini-label">Emotion</span>
+              <h4 id="emotion-output">Happy</h4>
+            </div>
+
+            <div class="card metric-card">
+              <span class="mini-label">Sarcasm</span>
+              <h4 id="sarcasm-output">Low</h4>
+            </div>
+
+            <div class="card metric-card">
+              <span class="mini-label">Style</span>
+              <h4 id="politeness-output">Polite and respectful</h4>
+            </div>
+          </div>
+
+          <div class="card response-panel">
+            <div class="panel-head">
+              <h3>AI Cultural Interpretation</h3>
+              <button class="secondary-btn" id="play-audio-btn">🔊 Play Response</button>
+            </div>
+            <p id="ai-response">
+              The speech conveys a positive, enthusiastic, and socially warm tone, indicating happiness and appreciation in an Indian collaborative setting.
+            </p>
+          </div>
+
+          <div class="card meaning-card">
+            <div class="panel-head">
+              <h3>What Did They Mean?</h3>
+            </div>
+            <div class="meaning-grid">
+              <div>
+                <span>Literal meaning</span>
+                <strong>Positive</strong>
+              </div>
+              <div>
+                <span>Detected tone</span>
+                <strong>Warm / friendly</strong>
+              </div>
+              <div>
+                <span>Emotion</span>
+                <strong>Happy</strong>
+              </div>
+              <div>
+                <span>Possible intention</span>
+                <strong>Appreciation</strong>
+              </div>
+              <div>
+                <span>Cultural context</span>
+                <strong>Indian social warmth</strong>
+              </div>
+              <div>
+                <span>Interpretation</span>
+                <strong>Respectful positivity</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="card dictionary-card">
+            <div class="panel-head">
+              <h3>Cultural Expression Dictionary</h3>
+            </div>
+            <ul class="dictionary-list">
+              <li><strong>Ayyo</strong><span>Telugu • surprise / mild frustration</span></li>
+              <li><strong>Chaala baagundi</strong><span>Telugu • very good / strong appreciation</span></li>
+              <li><strong>Namaskaram</strong><span>Telugu • respectful greeting</span></li>
+              <li><strong>Parledu</strong><span>Telugu • denial / refusal / not possible</span></li>
+              <li><strong>Sare</strong><span>Telugu • agreement / okay</span></li>
+            </ul>
+          </div>
+
+          <div class="card explainability-panel">
+            <div class="panel-head">
+              <h3>Explainable AI</h3>
+            </div>
+            <p>
+              High vocal energy, positive linguistic markers, and a warm speaking pattern suggest a happy emotional state. These features are interpreted as likely indicators of emotion-related speech patterns rather than direct access to internal feelings.
+            </p>
+          </div>
+
+          <div class="card session-card">
+            <div class="panel-head">
+              <h3>Session Report</h3>
+            </div>
+            <div class="session-grid">
+              <div>
+                <span>Duration</span>
+                <strong>02:31</strong>
+              </div>
+              <div>
+                <span>Dominant emotion</span>
+                <strong>😊 Happy</strong>
+              </div>
+              <div>
+                <span>Emotion changes</span>
+                <strong>4</strong>
+              </div>
+              <div>
+                <span>Positive sentiment</span>
+                <strong>78%</strong>
+              </div>
+              <div>
+                <span>Politeness</span>
+                <strong>91%</strong>
+              </div>
+              <div>
+                <span>Language mix</span>
+                <strong>Telugu + English</strong>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="voice-screen" class="screen">
+          <div class="page-header">
+            <div>
+              <p class="section-kicker">Input</p>
+              <h2>Voice Recording</h2>
+            </div>
+          </div>
+
+          <div class="card voice-panel">
+            <div class="mic-wrap">
+              <div class="mic-circle">🎤</div>
+            </div>
+
+            <div class="voice-status-box">
+              <p class="section-kicker">Listening...</p>
+              <h3 id="voice-status">Ready to capture your voice</h3>
+              <div class="timer-pill" id="timer-pill">00:07</div>
+            </div>
+
+            <div class="waveform large-wave" aria-label="Audio waveform">
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+
+            <div class="voice-actions">
+              <button class="primary-btn" id="analyze-btn">Analyze Audio</button>
+              <label class="secondary-btn upload-btn">
+                Upload Audio
+                <input type="file" id="voice-audio-upload" accept="audio/*" />
+              </label>
+            </div>
+
+            <div class="language-row">
+              <label for="language-select">Language</label>
+              <select id="language-select">
+                <option value="Hindi">Hindi</option>
+                <option value="English">English</option>
+                <option value="Telugu">Telugu</option>
+                <option value="Tamil">Tamil</option>
+                <option value="Bengali">Bengali</option>
+                <option value="Kannada">Kannada</option>
+                <option value="Malayalam">Malayalam</option>
+                <option value="Marathi">Marathi</option>
+                <option value="Gujarati">Gujarati</option>
+                <option value="Punjabi">Punjabi</option>
+                <option value="Urdu">Urdu</option>
+                <option value="Odia">Odia</option>
+                <option value="Assamese">Assamese</option>
+                <option value="Nepali">Nepali</option>
+                <option value="Sanskrit">Sanskrit</option>
+                <option value="Maithili">Maithili</option>
+                <option value="Konkani">Konkani</option>
+                <option value="Rajasthani">Rajasthani</option>
+                <option value="Bhojpuri">Bhojpuri</option>
+                <option value="Haryanvi">Haryanvi</option>
+                <option value="Manipuri">Manipuri</option>
+                <option value="Kashmiri">Kashmiri</option>
+                <option value="Santali">Santali</option>
+              </select>
+            </div>
+          </div>
+        </section>
+
+        <section id="analytics-screen" class="screen">
+          <div class="page-header">
+            <div>
+              <p class="section-kicker">Performance</p>
+              <h2>Model Performance</h2>
+            </div>
+          </div>
+
+          <div class="analytics-grid">
+            <div class="card metric-panel">
+              <div class="metric-bar">
+                <strong>92%</strong>
+                <span>ASR</span>
+              </div>
+              <div class="bar-track"><div class="bar-fill asr" style="width: 92%"></div></div>
+            </div>
+
+            <div class="card metric-panel">
+              <div class="metric-bar">
+                <strong>88%</strong>
+                <span>Emotion</span>
+              </div>
+              <div class="bar-track"><div class="bar-fill emotion" style="width: 88%"></div></div>
+            </div>
+
+            <div class="card metric-panel">
+              <div class="metric-bar">
+                <strong>91%</strong>
+                <span>Culture</span>
+              </div>
+              <div class="bar-track"><div class="bar-fill culture" style="width: 91%"></div></div>
+            </div>
+          </div>
+
+          <div class="card summary-panel">
+            <div class="summary-row">
+              <span>Average response time</span>
+              <strong>2.4 sec</strong>
+            </div>
+            <div class="summary-row">
+              <span>Successful tests</span>
+              <strong>18 passed</strong>
+            </div>
+            <div class="summary-row">
+              <span>Failed tests</span>
+              <strong>2 failed</strong>
+            </div>
+          </div>
+        </section>
+
+        <section id="research-screen" class="screen">
+          <div class="page-header">
+            <div>
+              <p class="section-kicker">Architecture</p>
+              <h2>AI Pipeline</h2>
+            </div>
+          </div>
+
+          <div class="pipeline">
+            <div class="pipeline-node">Audio Input</div>
+            <div class="pipeline-arrow">↓</div>
+            <div class="pipeline-node">Preprocessing</div>
+            <div class="pipeline-arrow">↓</div>
+            <div class="pipeline-node">Speech Analysis</div>
+            <div class="pipeline-arrow">↓</div>
+            <div class="pipeline-node">Text Processing</div>
+            <div class="pipeline-arrow">↓</div>
+            <div class="pipeline-node">Emotion Detection</div>
+            <div class="pipeline-arrow">↓</div>
+            <div class="pipeline-node">Sarcasm + Tone</div>
+            <div class="pipeline-arrow">↓</div>
+            <div class="pipeline-node">Cultural Context</div>
+            <div class="pipeline-arrow">↓</div>
+            <div class="pipeline-node">FastAPI Logic</div>
+            <div class="pipeline-arrow">↓</div>
+            <div class="pipeline-node">Response Output</div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
